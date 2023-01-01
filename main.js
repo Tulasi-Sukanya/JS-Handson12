@@ -19,13 +19,14 @@ function Person(firstName, lastName, age,gender){
     this.gender = gender;
   }
   Person.prototype.getDetails = function(){
-    return this.firstName + " " + this.lastName +"is"+this.age+"years old";
+    return this.firstName + " " + this.lastName+" " +"is"+" "+this.age+" years old";
   }  
 var person = new Person("guntakala","sriram", 25,"Male");
    person.hasOwnProperty("firastName"); 
+   console.log(person.hasOwnProperty("firastName"));
    person.hasOwnProperty("getDetails");  
-   person.getDetails(); 
-
+   console.log(person.hasOwnProperty("getDetails")); 
+   console.log(person.getDetails());
 //3. Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum for multiple arrays
 arr=[10,20,30,40,50]
 arr1=[1,2,3,4,5,6,7,8,9]
@@ -50,7 +51,7 @@ Array.addAll(arr2);
 //4. Write a JavaScript function to retrieve all the names of object's own and inherited properties.
 var obj1={
     name:"Prepbytes",
-    course:"JS",
+    course:"FS",
     period:"five months"
 }
 let result=Object.keys(obj1);
